@@ -1,0 +1,14 @@
+services:
+  smartschool:
+    image: postgres:18-alpine
+    container_name: smartschool-db
+    environment:
+      - POSTGRES_DB=smartschool
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=smartschool123
+    ports:
+      - "5432:5432"
+    volumes:
+      - smartschool-data:/var/lib/postgresql/data
+volumes:
+  smartschool-data:

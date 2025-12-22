@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: smartschool
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smartschool
+    username: root
+    password: smartschool123
+    driver-class-name: org.postgresql.Driver
