@@ -12,3 +12,7 @@ services:
       - smartschool-data:/var/lib/postgresql/data
 volumes:
   smartschool-data:
+
+networks:
+  smartschool-network:
+    driver: bridge

@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: smartschool
@@ -6,3 +7,15 @@ spring:
     username: root
     password: smartschool123
     driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+server:
+  port: 8100
+  servlet:
+    context-path: /smart-school
