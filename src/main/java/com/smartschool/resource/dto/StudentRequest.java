@@ -3,6 +3,7 @@ package com.smartschool.resource.dto;
 import com.smartschool.model.Student;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -12,7 +13,8 @@ public record StudentRequest(@NotBlank String name,
                              @NotBlank String lastName,
                              @NotBlank @Email String email,
                              @NotBlank String phone,
-                             @NotNull LocalDate dateOfBirth) {
+                             @NotNull LocalDate dateOfBirth,
+                             @NotBlank String registrationNumber) {
 
     public Student toEntity() {
         return Student.builder()
@@ -21,6 +23,8 @@ public record StudentRequest(@NotBlank String name,
                       .email(this.email)
                       .phone(this.phone)
                       .dateOfBirth(this.dateOfBirth)
+                      .registrationNumber(this.registrationNumber)
+                      .createdAt(LocalDateTime.now())
                       .build();
     }
 }

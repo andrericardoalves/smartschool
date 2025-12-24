@@ -14,6 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -52,9 +53,11 @@ public class Student {
     @Column(name = "phone", nullable = false)
     private String phone;
 
+    @NotNull
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
 
+    @NotBlank
     @Column(name = "registration_number", nullable = false, unique = true)
     private String registrationNumber;
 

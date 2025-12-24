@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /smart-school
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smartschool
+    username: test
+    password: test123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop

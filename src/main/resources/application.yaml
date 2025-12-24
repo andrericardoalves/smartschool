@@ -1,4 +1,7 @@
-
+server:
+  port: 8100
+  servlet:
+    context-path: /smart-school
 spring:
   application:
     name: smartschool
@@ -15,7 +18,3 @@ spring:
   flyway:
     enabled: true
     locations: classpath:db/migration
-server:
-  port: 8100
-  servlet:
-    context-path: /smart-school
